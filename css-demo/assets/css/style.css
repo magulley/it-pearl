@@ -13,6 +13,13 @@ html {
     box-sizing: inherit;
   }
 
+  /* Utility Classes */
+  
+  .container{
+    padding:40px;
+    margin:auto;
+  }
+
 body{
     background-color:#d3dbdd;
     font-family: "Geist Mono", monospace;
@@ -41,5 +48,70 @@ header.primary{
  border-radius:40px;
  background-image: url("https://assets.codepen.io/7248/bg_1.png");
  background-repeat:no-repeat;
- background-size: cover;  
+ background-size: cover;
+ display:flex;
+ flex-direction:row;
+ border-bottom:3px solid #008F8C;
+}
+
+header.primary h1, header.primary h2{
+  margin:0;
+}
+
+header.primary h1 a{
+  color: #d3dbdd;
+  text-decoration: none;
+  font-size: 2.5rem; 
+}
+
+header.primary h2{
+  color: #d3dbdd;
+
+}
+
+header.primary div.hgroup{
+  width:80%;
+}
+
+header.primary nav{
+  width:20%;
+}
+
+header.primary nav ul{
+  list-style: none;
+  margin: 0;
+  padding:0;
+}
+
+header.primary nav ul li{
+  margin-bottom:10px;
+}
+
+header.primary nav ul li a{
+  border: 1px solid #008F8C;
+  border-right:10px solid #008F8C;
+  border-radius:20px 0;
+  color:#d3dbdd;
+  text-decoration:none;
+  display:block;
+  background-color:rgba(0,0,0,.3);
+  padding:10px 10px 10px 0;
+  text-align:right;
+  transition:.5s;
+
+}
+
+header.primary nav a:hover{
+  background-color:rgba(0,0,0,.7);
+  text-decoration:underline;
+}
+
+#content{
+  line-height 1.8rem;
+}
+
+#content h2, #content h3{
+  color:#008F8C;
+  border-left: 7.5px solid #015958;
+  padding:5px;
 }
