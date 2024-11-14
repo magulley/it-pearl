@@ -12,6 +12,10 @@ html {
   *, *:before, *:after {
     box-sizing: inherit;
   }
+  
+  img {
+    max-width:100%;
+  }
 
   /* Utility Classes */
   
@@ -110,8 +114,66 @@ header.primary nav a:hover{
   line-height:1.8rem;
 }
 
-#content h2, #content h3{
+#content h2, #content h3, article.widget h2{
   color:#008F8C;
   border-left: 7.5px solid #015958;
   padding:5px;
+}
+
+#blog.container {
+background:#008F8C;
+padding:20px 0;
+border-top:6px double #d3dbdd;
+border-bottom:6px double #d3dbdd;
+}
+
+#blog >h2{
+  color:white;
+  text-shadow: 2px 2px #000;
+  font-size:2.2rem;
+  margin-left:20px;
+}
+
+#blog article.post{
+ background-color:white;
+ margin:20px;
+ padding:20px;
+ display:grid;
+ grid-template-columns:1fr 3fr;
+ grid-template-rows:auto;
+ grid-template-areas:
+ "figure header" 
+ "figure post-content"
+ "figure footer"
+
+}
+
+#blog article figure{
+  grid-area:figure;
+  margin:0 20px 0 0;
+}
+#blog article header{
+  grid-area:header;
+}
+#blog article .post-content{
+  grid-area:post-content;
+}
+#blog article .post-meta{
+  grid-area:footer;
+}
+
+aside .container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+
+#colophon {
+text-align:center;
+    background-image: url("https://assets.codepen.io/7248/bg_1.png");
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:white;
+  padding:20px;
+  border-radius:60px;
 }
