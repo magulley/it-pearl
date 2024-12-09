@@ -7,6 +7,27 @@ Color Scheme:
 #023535
 */
   
+
+
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .container{
+    padding:40px;
+    margin:auto;
+  }
+
+
 body {
-    background-color:blanchedalmond;
+    background-color:rgb(204, 204, 204);
+    font-family: "Parkinsans", sans-serif;
+}
+
+nav ul li a {
+    text-decoration: none;
+    
 }
