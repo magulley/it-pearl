@@ -2,8 +2,7 @@
 
 
 html {
-  margin:0;
-  padding:0;
+
   box-sizing: border-box;
   font-family:Verdana, Geneva, Tahoma, sans-serif
   }
@@ -27,6 +26,7 @@ body {
   overflow-x:hidden;
 
 
+
 }
 
 main {
@@ -40,8 +40,8 @@ main {
     margin:0;
     padding:0;
     width: 100vw;
-    height: 35vh;
-    background-image: url("../img/KartchnerBanner.jpg");
+    height: 100vh;
+    background-image: url("../img/cavetour-edit.jpg");
     background-size:cover;
     background-repeat:no-repeat;
    
@@ -79,8 +79,16 @@ margin-right:100px;
   
 }
 
+.btn {
+  background-color: rgb(73, 44, 6);
+  color:black;
+  padding:10px 20px;
+  border-radius: 60px;
+}
+
 .welcome {
   width: 100vw;
+
 }
 
  .welcome h1 {
@@ -95,7 +103,7 @@ margin-right:100px;
 
 .welcome h1 a {
     text-decoration: none;
-    color: rgb(130, 100, 53);
+    color: rgb(199, 195, 187);
   }
 
   .welcome h2 {
