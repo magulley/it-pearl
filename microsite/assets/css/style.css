@@ -148,13 +148,14 @@ color: rgb(235, 233, 230);
 background-color:rgb(57, 96, 11);
 color: rgb(235, 233, 230);
 }
-  /*
+ 
+
+
   .line {
   width: 50vw;
   height: 3px;
   margin: 8rem auto -2rem auto;
-  background-color: rgb(5, 118, 33); }/* Change color */
-
+  background-color: rgb(5, 118, 33); }
 
 
 
@@ -216,6 +217,7 @@ article.post a {
 aside {
   display:flex;
   margin-right:30px;
+  margin-top:20%;
  
 
 
@@ -231,6 +233,9 @@ aside {
 }
 .flex-img img {
   height:auto;
+  margin-top:20px;
+  margin-left:20px;
+  margin-bottom:4rem;
 }
 
 
