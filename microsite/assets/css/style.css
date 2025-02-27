@@ -1,6 +1,5 @@
 
 
-
 html {
 
   box-sizing: border-box;
@@ -24,15 +23,11 @@ body {
   margin:0;
   padding:0;
   overflow-x:hidden;
-
-
-
 }
 
 main {
  margin:0;
- background-color:rgb(252, 247, 242);
- 
+ background-color:rgb(252, 247, 242); 
    
 }
 
@@ -63,6 +58,7 @@ nav ul {
   flex-direction: row;
   justify-content:flex-end;
   text-decoration: none;
+  padding-top: 10px;
 
 }
 
@@ -79,11 +75,20 @@ margin-right:100px;
   
 }
 
+nav ul li a:hover {
+  border-bottom: 3px solid green;
+}
+
 .btn {
   background-color: rgb(73, 44, 6);
   color:black;
   padding:10px 20px;
   border-radius: 60px;
+}
+
+.btn:hover {
+background-color:rgb(57, 96, 11);
+color: rgb(235, 233, 230);
 }
 
 .welcome {
@@ -93,11 +98,12 @@ margin-right:100px;
 
  .welcome h1 {
   color: rgb(255, 255, 255);
-  margin-top:1000px;
-  padding:0;
+  margin:10px;
+  padding-top:80px;
   text-align:center;
   margin-top:60px;
-  font-size: 2rem;
+  font-size: 4rem;
+  font-family: exo;
   }
 
 
@@ -106,43 +112,80 @@ margin-right:100px;
     color: rgb(199, 195, 187);
   }
 
+
   .welcome h2 {
-    color: rgb(57, 96, 11);
+    color: rgb(155, 170, 139);
     text-align:center;
     font-size: 1.25rem;
-    margin-top: -1rem;
+    margin-top: 1rem;
     margin-bottom: 2rem;
   }
 
+  .hero-btns {
+    text-align: center;
+    margin-top: 60px;
+  
+  }
+  .hero-btns a {
+  background-color: rgb(73, 44, 6);
+  padding:10px 20px;
+  margin:20px;
+  border-radius: 60px;
+
+
+  }
+
+  .hero-btn1, .hero-btn2 {
+  color: whitesmoke;
+  }
+
+.hero-btn1:hover {
+background-color:rgb(57, 96, 11);
+color: rgb(235, 233, 230);
+}
+ 
+.hero-btn2:hover {
+background-color:rgb(57, 96, 11);
+color: rgb(235, 233, 230);
+}
+  /*
   .line {
   width: 50vw;
   height: 3px;
   margin: 8rem auto -2rem auto;
-  background-color: rgb(5, 118, 33); /* Change color */
-}
+  background-color: rgb(5, 118, 33); }/* Change color */
+
 
 
 
   section.container {
     margin-left: auto;
     margin-right: auto;
-    width: 80vw;
-   padding:0;
-   display:grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   justify-content: space-evenly;
+    padding:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: space-evenly;
   }
 
  article.post {
  background-color:rgb(252, 247, 242);
  padding:20px;
+ border: 1px solid rgba(139, 69, 19, 0.345);
+ width:auto;
+ overflow:hidden;
+ margin:20px;
+ border-style: ridge;
 
+ }
+
+ .post figure {
+  margin:0;
+  padding: 0;
  }
 
  article.post img {
   display: block;
-
-
+  height:auto;
  }
 
  article.post figcaption {
@@ -156,17 +199,40 @@ margin-right:100px;
  article.post h2 {
   font-size: 1.2rem;
   text-align: center;
+  margin-top: 30px;
  }
 
  .container p {
   font-size:.8rem;
   text-align: center;
+  margin-top: -10px;
  }
 
 article.post a {
   color: rgb(47, 86, 19);
 
 }
+
+aside {
+  display:flex;
+  margin-right:30px;
+ 
+
+
+}
+
+.sidebar {
+    margin: 40px;
+    font-size: .9rem;
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    line-height: 1.7;
+}
+.flex-img img {
+  height:auto;
+}
+
 
 /*
 article.widget {
