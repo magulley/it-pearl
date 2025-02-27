@@ -1,0 +1,93 @@
+html {
+
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  img {
+    max-width:100%;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(81, 57, 57);
+  }
+
+body {
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+
+main {
+ margin:0;
+ background-color:rgb(252, 247, 242); 
+   
+}
+
+  .header {
+    margin:0;
+    padding:0;
+    background-image: url("../img/KACA-Hero3_1.jpg");
+    background-size:cover;
+    background-repeat:no-repeat;
+    height: 70px;
+  }
+   
+
+  .nav {
+  padding:0;
+  margin:0;
+  color: rgb(226, 239, 239);
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+
+}
+
+nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-end;
+  text-decoration: none;
+  padding-top: 10px;
+
+}
+
+ nav ul li {
+list-style: none;
+text-decoration: none;
+font-size:1.2rem;
+margin-right:100px;
+ }
+
+ nav ul li a {
+  text-decoration: none;
+  color:beige;
+  
+}
+
+nav ul li a:hover {
+  border-bottom: 3px solid green;
+}
+
+
+
+
+
+
+
+
+footer.colophon {
+    background-color: rgba(18, 59, 3, 0.792);
+    height:120px;
+    width:100%;
+    margin:0;
+    padding: 40px;
+    text-align: center;
+    color:aliceblue;
+  }
