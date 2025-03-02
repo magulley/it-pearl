@@ -34,7 +34,7 @@ body {
 
 main {
  margin:0;
- background-color:rgb(252, 247, 242); 
+ background-color:whitesmoke; 
    
 }
 
@@ -47,6 +47,7 @@ main {
     background-image: url("../img/cavetour-edit.jpg");
     background-size:cover;
     background-repeat:no-repeat;
+ 
   }
    
 /*NAVIGATION*/
@@ -83,7 +84,7 @@ margin-right:100px;
 }
 
 nav ul li a:hover {
-  border-bottom: 3px solid green;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .btn {
@@ -94,9 +95,10 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-background-color:rgb(57, 96, 11);
+background-color:var(--color-primary);
 color: rgb(235, 233, 230);
 }
+
 /*HERO*/
 .welcome {
   width: 100vw;
@@ -138,50 +140,37 @@ background-color:rgb(57, 96, 11);
 color: rgb(235, 233, 230);
 }
 .hero-btn2:hover {
-background-color:rgb(57, 96, 11);
+background-color:var(--color-primary);
 color: rgb(235, 233, 230);
 }
  
-/*PARK INFO*/
-  .line {
-  
-  height: 1px;
-  margin: 4rem auto 2rem auto;
-  background-color: rgb(5, 118, 33); }
-
-.pg-2 {
-  background-color: #8C4303;
-  display:grid;
-  grid-template-columns: (repeat(5 1fr));
-}
-.pg-2 h2 {
-  font-family: exo;
-  font-size: 3rem;
-  text-align: center;
-  padding: 20px;
-  margin: 20px;
-}
-
-
 
 /*ARTICLES*/
   section.container {
-    margin-left: auto;
-    margin-right: auto;
+    height: 600px;
     padding:0;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-bottom: 30px;
   }
-
+#articles > h2 {
+  font-family: exo;
+  font-size: 3rem;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--color-accent);
+  margin-top: 60px;
+}
  article.post {
  background-color:rgb(252, 247, 242);
- padding:20px;
- border: 1px solid rgba(139, 69, 19, 0.345);
+ border-bottom: 2px solid rgba(139, 69, 19, 0.345);
  width:auto;
  overflow:hidden;
- margin:20px;
- border-style: ridge;
+ margin:10px;
+ border-radius: 22px;
 
  }
 
@@ -201,6 +190,7 @@ color: rgb(235, 233, 230);
  color: whitesmoke;
  margin: -1rem;
  margin-right: 1rem;
+ 
  }
 
  article.post h2 {
@@ -212,7 +202,8 @@ color: rgb(235, 233, 230);
  .container p {
   font-size:.8rem;
   text-align: center;
-  margin-top: -10px;
+  margin-top: -10px 0 auto auto 0;
+  color: var(--color-accent)
  }
 
 article.post a {
@@ -220,27 +211,92 @@ article.post a {
 
 }
 
+/*PARK INFO*/
+.line {
+  
+  height: 20px;
+  background-color: var(--color-accent);
+  }
 
-
-/*
-article.widget {
-  margin:0px 10 0px 10px; 
-  text-align: center;
-  background-color:rgb(124, 61, 9);
-  padding: 12px;
-  width: 14%;
-  font-size: .8rem;
-  color: whitesmoke;
-
+.pg-2 {
+   max-width: 90%;
+    margin: 20px auto;
+    padding: 40px 20px;
+    color: var(--color-background);
 }
-  */
+.pg-2 .line {
+height: 1px;
+width: 50vw;
+margin: 80px auto -10px auto;
+  background-color: var(--color-background);
+}
+.pg-2 h2 {
+  font-family: exo;
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+  margin-bottom:40px;
+  color:var(--color-accent);
+}
+
+
+.pg-2-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.pg2-main {
+    flex: 2;
+}
+
+.pg2-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+.sidebar {
+    flex: 1;
+    background: var(--color-primary);
+    padding: 40px 20px 200px 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.sidebar h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: var(--color-accent);
+    border-bottom: 2px solid var(--color-accent);
+    padding-bottom: 5px;
+}
+
+.sidebar h4 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--color-background);
+}
+
+.sidebar p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 5px 0;
+}
+
 
 footer.colophon {
-    background-color: rgba(18, 59, 3, 0.792);
+    background-color:var(--color-tertiary);
     height:120px;
     width:100%;
     margin:0;
     padding: 40px;
     text-align: center;
-    color:aliceblue;
+    color:whitesmoke;
   }
