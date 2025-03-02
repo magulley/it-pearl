@@ -1,4 +1,11 @@
-
+/*COLOR SCHEME*/
+:root {
+    --color-primary: #F29F05;   /* Light Gold */
+    --color-secondary: #D97904; /* Darker Orange */
+    --color-tertiary: #8C4303;  /* Dark Brown */
+    --color-accent: #732002;    /* Deep Red */
+    --color-background: #400101; /* Dark Burgundy */
+}
 
 html {
 
@@ -31,6 +38,7 @@ main {
    
 }
 
+/*HEADER IMG*/
   .header {
     margin:0;
     padding:0;
@@ -39,10 +47,9 @@ main {
     background-image: url("../img/cavetour-edit.jpg");
     background-size:cover;
     background-repeat:no-repeat;
-   
   }
    
-
+/*NAVIGATION*/
   .nav {
   padding:0;
   margin:0;
@@ -90,29 +97,22 @@ nav ul li a:hover {
 background-color:rgb(57, 96, 11);
 color: rgb(235, 233, 230);
 }
-
+/*HERO*/
 .welcome {
   width: 100vw;
-
 }
-
  .welcome h1 {
   color: rgb(255, 255, 255);
-  margin:10px;
-  padding-top:80px;
+  margin:80px 10px 10px 10px;
+  padding-top:100px;
   text-align:center;
-  margin-top:60px;
   font-size: 4rem;
   font-family: exo;
   }
-
-
 .welcome h1 a {
     text-decoration: none;
     color: rgb(199, 195, 187);
   }
-
-
   .welcome h2 {
     color: rgb(155, 170, 139);
     text-align:center;
@@ -120,45 +120,51 @@ color: rgb(235, 233, 230);
     margin-top: 1rem;
     margin-bottom: 2rem;
   }
-
   .hero-btns {
     text-align: center;
     margin-top: 60px;
-  
-  }
+   }
   .hero-btns a {
   background-color: rgb(73, 44, 6);
   padding:10px 20px;
   margin:20px;
   border-radius: 60px;
-
-
   }
-
   .hero-btn1, .hero-btn2 {
   color: whitesmoke;
   }
-
 .hero-btn1:hover {
 background-color:rgb(57, 96, 11);
 color: rgb(235, 233, 230);
 }
- 
 .hero-btn2:hover {
 background-color:rgb(57, 96, 11);
 color: rgb(235, 233, 230);
 }
  
-
-
+/*PARK INFO*/
   .line {
-  width: 50vw;
-  height: 3px;
-  margin: 8rem auto -2rem auto;
+  
+  height: 1px;
+  margin: 4rem auto 2rem auto;
   background-color: rgb(5, 118, 33); }
 
+.pg-2 {
+  background-color: #8C4303;
+  display:grid;
+  grid-template-columns: (repeat(5 1fr));
+}
+.pg-2 h2 {
+  font-family: exo;
+  font-size: 3rem;
+  text-align: center;
+  padding: 20px;
+  margin: 20px;
+}
 
 
+
+/*ARTICLES*/
   section.container {
     margin-left: auto;
     margin-right: auto;
@@ -214,29 +220,6 @@ article.post a {
 
 }
 
-aside {
-  display:flex;
-  margin-right:30px;
-  margin-top:20%;
- 
-
-
-}
-
-.sidebar {
-    margin: 40px;
-    font-size: .9rem;
-    width: 40%;
-    padding: 10px;
-    text-align: center;
-    line-height: 1.7;
-}
-.flex-img img {
-  height:auto;
-  margin-top:20px;
-  margin-left:20px;
-  margin-bottom:4rem;
-}
 
 
 /*
