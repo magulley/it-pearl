@@ -2,6 +2,13 @@ body{
     background-color:rgba(30, 4, 46, 0.567);
 }
 
+section.top h2 {
+    color:azure;
+    text-align:center;
+    margin:20px;
+    font-size:2rem;
+    padding:20px;
+}
 img{
     max-width:100%;
 }
