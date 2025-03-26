@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="JavaScript Calculator">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Marqeeta Gulley">
+    <title>AJAX Converter</title>
+    <link rel="stylesheet" type="text/css" href="assets/style/style.css">
+</head>
+<body>
+<form id="myform">
+  <div class="formcontainer">
+    <h1>Unit Converter</h1>
+    <fieldset id="detail">
+      <legend>Unit Converter (AJAX)</legend>  
+    <!-- Input for Value -->
+    <label class="formlabel" for="FromValue">Enter Value:</label>
+    <input type="number" id="FromValue" required>
+    <span class="error" id="valueError"></span>
+    <br><br>
+
+    <!-- From Unit Selection -->
+    <div class="unit-selection">
+        <strong>From Units:</strong><br>
+        <input type="radio" name="FromUnit" value="cm"> Centimeters<br>
+        <input type="radio" name="FromUnit" value="m"> Meters<br>
+        <input type="radio" name="FromUnit" value="km"> Kilometers<br>
+        <input type="radio" name="FromUnit" value="in"> Inches<br>
+        <input type="radio" name="FromUnit" value="ft"> Feet<br>
+        <input type="radio" name="FromUnit" value="yd"> Yards<br>
+        <input type="radio" name="FromUnit" value="mi"> Miles<br>
+        <span class="error" id="fromError"></span>
+    </div>
+
+    <!-- To Unit Selection -->
+    <div class="unit-selection">
+        <strong>To Units:</strong><br>
+        <input type="radio" name="ToUnit" value="cm"> Centimeters<br>
+        <input type="radio" name="ToUnit" value="m"> Meters<br>
+        <input type="radio" name="ToUnit" value="km"> Kilometers<br>
+        <input type="radio" name="ToUnit" value="in"> Inches<br>
+        <input type="radio" name="ToUnit" value="ft"> Feet<br>
+        <input type="radio" name="ToUnit" value="yd"> Yards<br>
+        <input type="radio" name="ToUnit" value="mi"> Miles<br>
+        <span class="error" id="toError"></span>
+    </div>
+
+    <br><br>
+
+    <!-- Buttons -->
+   <button type="button" onclick="convert()">Calculate</button>
+<button type="button" onclick="clearForm()">Clear</button>
+
+    <!-- Result Display -->
+    <p id="result"></p>
+  </div>
+    </fieldset>
+    </form>
+    <script src="assets/scripts/unitconverter.js"></script>
+</body>
+</html>
