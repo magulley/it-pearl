@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Currency Value History">
+    <meta name="keywords" content="Currency, Forex, Chart.js, Polygon.io">
+    <meta name="author" content="Allecksis Gulley">
+    <title>Currency Value History</title>
+    <link rel="stylesheet" href="assets/css/currency.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Currency Value History</h1>
+        <form id="currencyForm">
+            <label for="fromCurrency">Base Currency:</label>
+            <select id="fromCurrency" data-rules="Base Currency is Required"required>
+                 <option value="">Select a currency</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+            </select>
+            <br>
+
+            <label for="toCurrency">Convert to Currency:</label>
+            <select id="toCurrency" data-rules="Base Currency is Required" required>
+                <option value="">Select a currency</option>
+                <option value="USD">US Dollar</option>
+                <option value="EUR">Euro</option>
+                <option value="GBP">British Pound</option>
+                <option value="JPY">Japanese Yen</option>
+                <option value="AUD">Australian Dollar</option>
+                <option value="CAD">Canadian Dollar</option>
+            </select>
+            <br>
+
+            <label for="fromDate">From Date:</label>
+            <input type="date" id="fromDate" data-rules="From date is required" required>
+            <br>
+
+            <label for="toDate">To Date:</label>
+            <input type="date" id="toDate" data-rules="To date is required" required>
+            <br>
+
+            <button type="button" onclick="fetchData()">Fetch Data</button>
+            <button type="button" onclick="clearForm()">Clear</button>
+
+            <p id="errorMessages" class="error"></p>
+        </form>
+        <canvas id="currencyChart" width="400" height="300"></canvas>
+        <p id="result"></p>
+    </div>
+    <script src="assets/js/currency.js"></script>
+</body>
+</html>
