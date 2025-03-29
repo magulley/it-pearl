@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Kartchner Caverns Forecast">
+    <meta name="keywords" content="JavaScript, HTML, CSS">
+    <meta name="author" content="Marqeeta Gulley">
+    <title>Kartchner Caverns Forecast</title>
+    <link rel="stylesheet" type="text/css" href="assets/style/forecast.css">
+</head>
+<body>
+ <h1>Location Temperature</h1>
+
+    <!-- Location Input Section -->
+    <label for="locationInput">Enter Location:</label>
+    <input type="text" id="locationInput" placeholder="Kartchner Caverns State Park">
+    <button id="getForecast">Display Temp</button>
+    <button id="clear">Clear</button>
+    <p id="errorMessage">Location not found. Please try again.</p>
+
+    <div id="locationDetails"></div>
+
+    <h2>Temperature</h2>
+    <table id="forecastTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="forecastChart" style="width: 600px; height: 400px;"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/scripts/forecast.js"></script>
+
+
+
+</body>
