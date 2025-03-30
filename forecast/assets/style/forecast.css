@@ -1,0 +1,84 @@
+:root {
+    --color-primary: #F29F05;   /* Light Gold */
+    --color-secondary: #D97904; /* Darker Orange */
+    --color-tertiary: #8C4303;  /* Dark Brown */
+    --color-accent: #732002;    /* Deep Red */
+    --color-background: #400101; /* Dark Burgundy */
+}
+
+html {
+
+  box-sizing: border-box;
+  font-family:Verdana, Geneva, Tahoma, sans-serif
+  }
+
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+#errorMessage {
+    color: red;
+    font-weight: bold;
+    display: none;
+    margin-top: 10px;
+}
+
+.container {
+    text-align: center;
+ max-width: 80%;
+  margin: 20px auto;
+  border-radius: 20px;
+}
+h1 {
+    padding:25px;
+    color: #8C4303;
+}
+
+button {
+    background-color: var(--color-secondary);
+  padding:10px 20px;
+  margin:20px;
+  border-radius: 60px;
+  color:whitesmoke;
+}
+h2 {
+    color:#D97904;
+}
+#locationDetails {
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+#forecastTable {
+    width: 50%;
+     margin: 20px auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Table header styling */
+#forecastTable th {
+    background-color: var(--color-accent);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Table row styling */
+#forecastTable td {
+    border: 1px solid var(--color-accent);
+    padding: 10px;
+    text-align: center;
+}
+
+/* Alternating row colors */
+#forecastTable tbody tr:nth-child(even) {
+    background-color: rgb(235, 215, 180);
+}
+
+/* Add some spacing for the chart */
+#forecastChart {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+}

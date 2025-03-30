@@ -11,41 +11,60 @@ document.getElementById("getForecast").addEventListener("click", function () {
   forecastTableBody.innerHTML = "";
   forecastChartContainer.innerHTML = "";
 
+  // Default to Kartchner Caverns if no input is given
   if (!location) {
-    errorMessage.textContent = "Location is required!";
-    errorMessage.style.display = "block";
+    fetchWeather(
+      31.8392,
+      -110.3504,
+      "Kartchner Caverns State Park",
+      "Arizona",
+      "USA"
+    );
     return;
   }
 
-  // Use Open-Meteo API for geocoding and weather forecast
-  const geoUrl = `https://api.open-meteo.com/v1/search?name=${location}&count=1`;
+  // Geocode the location
+  const geoUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${location}&count=1`;
 
   fetch(geoUrl)
     .then((response) => response.json())
     .then((data) => {
       if (data.results && data.results.length > 0) {
         const locationData = data.results[0];
-        const lat = locationData.latitude;
-        const lon = locationData.longitude;
-        const name = locationData.name;
-        const admin1 = locationData.admin1;
-        const country = locationData.country;
-
-        // Display location details
-        locationDetails.innerHTML = `
-                    <h3>${name}, ${admin1}, ${country}</h3>
-                    <p>Latitude: ${lat}</p>
-                    <p>Longitude: ${lon}</p>
-                `;
-
-        // Fetch temperature forecast
-        const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min&temperature_unit=celsius&timezone=America/Phoenix`;
-
-        return fetch(forecastUrl);
+        fetchWeather(
+          locationData.latitude,
+          locationData.longitude,
+          locationData.name,
+          locationData.admin1,
+          locationData.country
+        );
       } else {
         throw new Error("Location not found");
       }
     })
+    .catch((error) => {
+      console.error(error);
+      errorMessage.textContent = error.message;
+      errorMessage.style.display = "block";
+    });
+});
+
+function fetchWeather(lat, lon, name, admin1, country) {
+  const locationDetails = document.getElementById("locationDetails");
+  const forecastTableBody = document.querySelector("#forecastTable tbody");
+  const forecastChartContainer = document.getElementById("forecastChart");
+
+  // Display location details
+  locationDetails.innerHTML = `
+        <h3>${name}, ${admin1}, ${country}</h3>
+        <p>Latitude: ${lat}</p>
+        <p>Longitude: ${lon}</p>
+    `;
+
+  // Fetch weather forecast
+  const forecastUrl = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&daily=temperature_2m_max,temperature_2m_min&temperature_unit=fahrenheit&timezone=America/Phoenix`;
+
+  fetch(forecastUrl)
     .then((response) => response.json())
     .then((forecastData) => {
       const dailyForecasts = forecastData.daily;
@@ -56,12 +75,12 @@ document.getElementById("getForecast").addEventListener("click", function () {
         const row = document.createElement("tr");
         row.innerHTML = `
                     <td>${date.toDateString()}</td>
-                    <td>${temp} °C</td>
+                    <td>${temp} °F</td>
                 `;
         forecastTableBody.appendChild(row);
       });
 
-      // Prepare the data for the chart
+      // Prepare data for the chart
       const dates = dailyForecasts.time.map((time) =>
         new Date(time).toDateString()
       );
@@ -75,13 +94,13 @@ document.getElementById("getForecast").addEventListener("click", function () {
           labels: dates,
           datasets: [
             {
-              label: "Max Temperature (°C)",
+              label: "Max Temperature (°F)",
               data: maxTemps,
               borderColor: "rgb(255, 99, 132)",
               fill: false,
             },
             {
-              label: "Min Temperature (°C)",
+              label: "Min Temperature (°F)",
               data: minTemps,
               borderColor: "rgb(54, 162, 235)",
               fill: false,
@@ -90,9 +109,5 @@ document.getElementById("getForecast").addEventListener("click", function () {
         },
       });
     })
-    .catch((error) => {
-      console.error(error);
-      errorMessage.textContent = error.message;
-      errorMessage.style.display = "block";
-    });
-});
+    .catch((error) => console.error("Error fetching weather data:", error));
+}
