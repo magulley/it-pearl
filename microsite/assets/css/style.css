@@ -151,7 +151,6 @@ color: rgb(235, 233, 230);
     padding:0;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr;
-    justify-content: space-between;
     margin-bottom: 30px;
   }
 #articles > h2 {
@@ -252,7 +251,7 @@ margin: 80px auto -10px auto;
 }
 
 .pg2-img img {
-    width: 100%;
+    width: 75%;
     height: auto;
     display: block;
     margin: 20px auto;

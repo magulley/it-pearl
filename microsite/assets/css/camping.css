@@ -85,9 +85,17 @@ nav ul li a:hover {
 .primary-content h1 {
   color:rgb(92, 25, 25);
   text-align: center;
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-bottom:60px;
 }
 
+.email ul {
+  list-style-type:none;
+}
+.email a {
+  text-decoration: none;
+  color: rgb(210, 123, 10);
+}
 
 #wufoo-zllspe902nmhkb {
   max-width: 60%;

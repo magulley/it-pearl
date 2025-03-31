@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Kartchner Caverns State Park</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Keyword rich narrative on site purpose" />
+  <meta name="author" content="Allecksis Gulley" />
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet"> <!-- Add your own Font -->
+  <link href="assets/css/forecast.css" rel="stylesheet" />
+</head>
+<body>
+  <main>
+  <header role="banner" class="header">
+     <nav role="navigation" class="nav">
+      <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="camping.html">Camping</a></li>
+        <li><a href="tours.html">Tours</a></li>
+        <li><a href="forecast.html">Temp</a></li>
+        <li class="btn"><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+   
+  </header>
+    <main class="container">  
+ <h1>Location Temperature</h1>
+    <label for="locationInput" class="location">Enter Location:</label>
+    <input type="text" id="locationInput" placeholder="Kartchner Caverns State Park">
+    <button id="getForecast">Display Temp</button>
+    <button id="clear">Clear</button>
+   <p id="errorMessage">Location not found. Please try again.</p>
+
+    <div id="locationDetails"></div>
+    <h2>Temperature</h2>
+    <table id="forecastTable">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temp</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+    <div id="forecastChart"></div>
+
+  
+  
+
+  <footer role="contentinfo" class="colophon">
+    <p>Highway 90, 9 Miles (14 Km) South Of Interstate 10, Benson, AZ 85602</p>
+    <h6>&copy; 2024 Allecksis Gulley</h6>
+  </footer>
+  </main>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="assets/scripts/forecast.js"></script>
+</body>
+
+</html>
